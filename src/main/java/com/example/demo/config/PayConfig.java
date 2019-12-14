@@ -1,11 +1,14 @@
 package com.example.demo.config;
 
+import com.alipay.api.AlipayClient;
+import com.alipay.api.DefaultAlipayClient;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 @Data
-@Component
+@Configuration
 public class PayConfig {
 
     @Value("${alipay.appId}")
@@ -31,5 +34,10 @@ public class PayConfig {
 
     private String FORMAT = "json";
     private String CHARSET = "UTF-8";
-    private String SIGNT_TYPE = "RSA2";
+    private String SIGN_TYPE = "RSA2";
+
+    @Bean
+    public AlipayClient alipayClient() {
+        return new DefaultAlipayClient(SERVER_URL, APP_ID, PRIVATE_KEY, FORMAT, CHARSET, PUBLIC_KEY, SIGN_TYPE);
+    }
 }
