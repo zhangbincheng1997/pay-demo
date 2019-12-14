@@ -1,25 +1,21 @@
 # pay-demo
-
-微信支付对个人开发者很不友好，还好支付宝提供沙箱服务。
-> 蚂蚁沙箱环境(Beta)是协助开发者进行接口功能开发及主要功能联调的模拟环境，在沙箱完成接口开发及主要功能调试后，请务必在蚂蚁正式环境进行完整的功能验收测试。所有返回码及业务逻辑以正式环境为准。
+微信支付对个人开发者很不友好，还好支付宝提供沙箱服务......
 
 ## [沙箱](https://openhome.alipay.com/platform/appDaily.htm)
-https://sandbox.alipaydev.com/user/accountDetails.htm?index=4
+蚂蚁沙箱环境(Beta)是协助开发者进行接口功能开发及主要功能联调的模拟环境，在沙箱完成接口开发及主要功能调试后，请务必在蚂蚁正式环境进行完整的功能验收测试。所有返回码及业务逻辑以正式环境为准。
 
-## 文档
-https://docs.open.alipay.com/
+## [文档](https://docs.open.alipay.com/)
+1. [授权](https://docs.open.alipay.com/284)
+- 第一步：URL 拼接
+- 第二步：获取 auth_code
+- 第三步：换取 access_token 和 userId
+- 第四步：获取用户信息
 
-### [授权](https://docs.open.alipay.com/284)
-1. 第一步：URL 拼接
-2. 第二步：获取 auth_code
-3. 第三步：换取 access_token 和 userId
-4. 第四步：获取用户信息
-
-### [支付](https://docs.open.alipay.com/270)
-1. alipay.trade.page.pay(统一收单下单并支付页面接口) 
-2. alipay.trade.query(统一收单线下交易查询)
-3. alipay.trade.refund(统一收单交易退款接口)
-4. alipay.trade.close(统一收单交易关闭接口)
+2. [支付](https://docs.open.alipay.com/270)
+- alipay.trade.page.pay(统一收单下单并支付页面接口) 
+- alipay.trade.query(统一收单线下交易查询)
+- alipay.trade.refund(统一收单交易退款接口)
+- alipay.trade.close(统一收单交易关闭接口)
 
 ## 回调地址
 - alipay.authUrl=http://www.littleredhat1997.com:8888/auth
